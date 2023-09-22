@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="cssreset.css">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Coustard&family=Open+Sans&family=Roboto:ital,wght@0,100;0,400;1,900&display=swap');
+      </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ada Computing Sign Up</title>
+    <link rel="stylesheet" href="cssreset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Coustard&family=Open+Sans&family=Roboto:ital,wght@0,100;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="background">
-        <img src="bg.jpg" alt="background">
-    </div>
     <div class="main">
-        <img class="painting" src="bg-art.jpg" alt="art depicting a brown haired woman">
-        <div class="sign-up">
-            <fieldset>
-                <legend>Sign Up</legend>
-                <form action="process_registration.php" method="POST">
-                    <label for="first_name">First Name:</label>
-                    <input type="text" id="first_name" name="first_name" required><br><br>
-            
-                    <label for="last_name">Last Name:</label>
-                    <input type="text" id="last_name" name="last_name" required><br><br>
-            
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required><br><br>
-            
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required><br><br>
-            
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required><br><br>
-            
-                    <label for="confirm_password">Confirm Password:</label>
-                    <input type="password" id="confirm_password" name="confirm_password" required><br><br>
-            
-                    <input type="submit" value="Submit">
-                </form>
-            </fieldset>
+        <div class="image-sidebar">
+            <img class="woman-art" src="art.jpg" alt="art">
+        </div>
+        <div class="forms">
+            <form>
+                <fieldset>
+                    <legend>Sign Up</legend>
+                    <div class="left">
+                        <div>
+                            <label for="first-name">First Name:</label>
+                            <input required type="text" id="first-name" name="first-name"><br>
+                        </div>
+                        <div>
+                            <label for="last-name">Last Name:</label>
+                            <input required type="text" id="last-name" name="last-name"><br>
+                        </div>
+                        <label for="email">Email:</label>
+                        <input required type="email" id="email" name="email"><br>
+                    </div>
+
+                    <div class="right">
+                        <div>
+                            <label for="phone">Phone Number:</label>
+                            <input required type="tel" id="phone" name="phone"><br>
+                        </div>
+                        <div>
+                            <label for="password">Password:</label>
+                            <input required type="password" id="password" name="password" pattern><br>
+                        </div>
+                        <div>
+                            <label for="confirm-password">Confirm Password:</label>
+                            <input required type="password" id="confirm-password" name="confirm-password"><br>
+                        </div>
+                    </div>
+
+                </fieldset>
+        
+                <input type="submit" id="register" value="Register">
+            </form>
         </div>
     </div>
+    <script src="form.js"></script>
 </body>
 </html>
